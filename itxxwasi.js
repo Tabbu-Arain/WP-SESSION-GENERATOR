@@ -7,6 +7,7 @@ let server = require('./tabbuqr.js'),
     code = require('./pair');
 require('events').EventEmitter.defaultMaxListeners = 500;
 app.use('/tabbuqr', server);
+app.use('/code', code);
 app.use('/pair',async (req, res, next) => {
 res.sendFile(__path + '/pair.html')
 })
